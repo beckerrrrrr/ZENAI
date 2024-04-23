@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs com Fundo Colorido (Tailwind CSS)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <input type="text" id="textoInput" placeholder="Digite seu texto aqui" class="bg-gray-300 px-2 py-1 rounded">
+    </footer>
+
+    <div id="div1" class="bg-blue-200 p-4 rounded my-4 mx-2 h-24"></div>
+    <div id="div2" class="bg-green-200 p-4 rounded my-4 mx-2 h-24"></div>
+
+    <script>
+        const input = document.getElementById('textoInput');
+        const div1 = document.getElementById('div1');
+        const div2 = document.getElementById('div2');
+
+        input.addEventListener('input', () => {
+            div1.innerText = input.value;
+            div2.innerText = input.value;
+        });
+    </script>
+</body>
+
+</html>
